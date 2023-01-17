@@ -1,3 +1,4 @@
+```mermaid
 graph TD
 subgraph Dynamic training plan
     A["Fit files (bike + run; swim todo)"] -->|Process Fitfiles| B{DB}
@@ -25,3 +26,4 @@ subgraph Static training plan
     L["Fixed workout rules"] --> M[Taper workouts]
     L --> N[Post race recovery workouts]
 end
+```
