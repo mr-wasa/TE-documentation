@@ -20,7 +20,7 @@ subgraph Dynamic training plan
     B --> P
     P[Athlete clustering] --> R
     Q[Missed workouts] --> I
-    R[Ramping] --> F
+    R[Ramping] -->|Find plan ML| F
 end
 subgraph Static training plan
     L["Fixed workout rules"] --> M[Taper workouts]
