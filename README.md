@@ -1,10 +1,11 @@
 ```mermaid
 graph TD
 subgraph Dynamic training plan
-    A["Fit files (bike + run; swim todo)"] -->|Process Fitfiles| B{DB}
+    A["Fit files (bike + run; swim todo)"] -->|Process Fitfiles| Aa["CyclingActivity RunningActivity"]
+    Aa --> B{DB}
     C["Recovery data (HR, HRV, arm/shoulder, core, leg soreness)"] --> B
     C --> D("Recovery model (cardio and ortho)")
-    A -->|a1 readiness| D
+    Aa -->|a1 readiness| D
     D --> B
     B -->|not enough data| Ba("good_athletes digital twin (accumulated user data)")
     B -->|enough data: train ML| E(Digital twin)
