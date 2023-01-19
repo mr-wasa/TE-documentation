@@ -16,7 +16,8 @@ subgraph Dynamic training plan
     B --> H
     D --> I[Notification]
     I -->|User confirms| J[Plan adaptions]
-    D --> K[Predicted recovery]
+    D -->|Find plan/CO| K["Recovery_Prediction (dates of training plan)"]
+    D -->|Check in| RM["Recovery_Model (date today)"]
     O{Swim workout DB} -->|CO| G
     B --> P
     P[Athlete clustering] --> R
